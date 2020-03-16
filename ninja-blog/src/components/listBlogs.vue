@@ -2,7 +2,7 @@
 	<div id="show-blogs">
 		<h1>List Blog Titles</h1>
 		<input type="text" v-model="search" placeholder="search blogs" />
-		<div v-for="blog in filteredBlogs" class="single-blog">
+		<div v-for="(blog, index) in filteredBlogs" class="single-blog" :key="index">
 			<h2 v-rainbow>{{ blog.title | to-uppercase }}</h2>
 		</div>
 	</div>
